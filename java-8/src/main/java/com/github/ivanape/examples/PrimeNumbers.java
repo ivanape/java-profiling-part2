@@ -31,6 +31,6 @@ public class PrimeNumbers {
             next = getNextPrimeAbove(next);
             primes.add(next);
         }
-        System.out.println(primes);
+        //System.out.println(primes);
     }
 }
