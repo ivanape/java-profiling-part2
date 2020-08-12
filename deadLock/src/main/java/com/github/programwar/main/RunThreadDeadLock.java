@@ -5,21 +5,18 @@ public class RunThreadDeadLock {
     private static class LeftRightDeadLock implements Runnable {
         private static final Object left = new Object();
         private static final Object right = new Object();
-        private int number = 0;  // change value of number to 4000,  to find thread starvation issue.
 
-        public void doSomething(int number) {
-            for (int i = 0; i < number; i++) {
-                char[] tmp = new char[1024 * 1024];
-                tmp[1] = 'a';
-                System.out.printf("doSomething %s%n", Thread.currentThread().getName());
-            }
+        public void doSomething() {
+            char[] tmp = new char[1024 * 1024];
+            tmp[1] = 'a';
+            System.out.printf("doSomething %s%n", Thread.currentThread().getName());
         }
 
         public void leftRight() {
             synchronized (left) {
                 synchronized (right) {
                     System.out.printf("%s -> leftRight calling doSomething%n", Thread.currentThread().getName());
-                    doSomething(number);
+                    doSomething();
                 }
             }
         }
@@ -28,7 +25,7 @@ public class RunThreadDeadLock {
             synchronized (right) {
                 synchronized (left) {
                     System.out.printf("%s -> rightLeft calling doSomething%n", Thread.currentThread().getName());
-                    doSomething(number);
+                    doSomething();
                 }
             }
         }
@@ -63,7 +60,7 @@ public class RunThreadDeadLock {
 
         tFirst.start();
         tSecond.start();
-        //tThird.start();
+        tThird.start();
     }
 
 }
