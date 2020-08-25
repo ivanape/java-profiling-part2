@@ -21,9 +21,6 @@ import jdk.jfr.Description;
 import jdk.jfr.Event;
 import jdk.jfr.Label;
 
-/**
- * This is a JDK Flight Recorder event.
- */
 @Label("Work")
 @Category("01_JFR_HotMethods")
 @Description("Data from one loop run in the worker thread")
