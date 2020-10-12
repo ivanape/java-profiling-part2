@@ -24,7 +24,7 @@ import java.io.IOException;
  */
 public class HotMethods {
 	// Hint: You may want to set NUMBER_OF_THREADS close to the number of hardware threads for maximum saturation
-	private static final int NUMBER_OF_THREADS = 8;
+	private static final int NUMBER_OF_THREADS = 4;
 
 	public static void main(String[] args) throws IOException {
 		ThreadGroup threadGroup = new ThreadGroup("Workers");
