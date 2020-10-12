@@ -28,7 +28,8 @@ public class HolderOfUniqueValues {
 	private Collection<Integer> collection;
 
 	public HolderOfUniqueValues() {
-		collection = new LinkedList<>(); //new HashSet<Integer>();
+		//collection = new HashSet<Integer>();
+		collection = new LinkedList<>();
 	}
 
 	// Hint: This creates a list of unique elements!
