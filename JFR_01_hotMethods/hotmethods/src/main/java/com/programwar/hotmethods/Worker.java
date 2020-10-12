@@ -17,12 +17,12 @@
 package com.programwar.hotmethods;
 
 /**
- * The code run in the worker threads. One JFR event will be generated per lap in the loop,
- * recording the "result".
+ * The code run in the worker threads. One JFR event will be generated per lap
+ * in the loop, recording the "result".
  */
 public class Worker implements Runnable {
 	public void run() {
-		while (true) {
+		for (int i = 0; i < 500; i++) {
 			WorkEvent event = new WorkEvent();
 			event.begin();
 			HolderOfUniqueValues i1 = new HolderOfUniqueValues();
