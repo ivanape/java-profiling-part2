@@ -1,0 +1,3 @@
+[submodule "jfr-datasource"]
+    path = jfr-datasource
+    url = https://github.com/rh-jmc-team/jfr-datasource.git
