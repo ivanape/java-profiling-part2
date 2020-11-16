@@ -13,13 +13,13 @@ public class App
 	private HashMap<Integer, MyAlloc> map = new HashMap<Integer, MyAlloc>();
 	
 	private static class MyAlloc {
-		private int id;
+		private Integer id;
 		
-		private MyAlloc(int id) {
+		private MyAlloc(Integer id) {
 			this.id = id;
 		}
 		
-		private int getId() {
+		private Integer getId() {
 			return id;
 		}
 	}
