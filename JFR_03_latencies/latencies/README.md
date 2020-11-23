@@ -16,7 +16,7 @@ Help below if you get stuck.
 
 1. Look at the latency_before.jfr recording and check the automated analysis. What is flagged?
 
-2. What class is all of the contention on? (Jump to the page associated with the higest ranked rules - Lock Instances.)
+2. What class is all of the contention on? (Jump to the page associated with the highest ranked rules - Lock Instances.)
 
 3. The blocking events all seem to be due to calls to the Log method.
 
