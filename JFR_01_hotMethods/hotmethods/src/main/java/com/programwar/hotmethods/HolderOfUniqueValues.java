@@ -27,13 +27,13 @@ public class HolderOfUniqueValues {
 	private Collection<Integer> collection;
 
 	public HolderOfUniqueValues() {
-		collection = new HashSet<Integer>();
+		collection = new HashSet<>();
 	}
 
 	// Hint: This creates a list of unique elements!
-	public void initialize(int moduloDivisor) {
-		collection.clear();
-		for (int i = 1; i < 10000; i++) {
+	public void initialize(Integer moduloDivisor) {
+		collection.clear();		
+		for (Integer i = 1; i < 10000; i++) {
 			if ((i % moduloDivisor) != 0)
 				collection.add(i);
 		}
